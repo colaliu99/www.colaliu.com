@@ -113,21 +113,26 @@ const Hero: React.FC<HeroProps> = ({ content, imageSrc }) => {
                {/* Decorative Background Elements */}
                <div className="absolute w-[60%] h-full right-0 top-0 bg-[#EAEAE5] skew-x-12 origin-top-right"></div>
                
-               {/* Framed Photo Container */}
-               <div className="relative z-10 w-auto h-[85%] md:h-[75%] aspect-[3/4] transition-transform duration-700 hover:scale-[1.02]">
-                   {/* Shadow Layer */}
-                   <div className="absolute inset-0 translate-x-4 translate-y-4 bg-black/10 blur-xl rounded-sm"></div>
-                   
-                   {/* White Frame */}
-                   <div className="absolute inset-0 bg-white shadow-2xl p-3 md:p-4 rotate-0 md:rotate-2 hover:rotate-0 transition-all duration-500 ease-out">
-                       {/* The Image */}
-                       <div className="w-full h-full relative overflow-hidden bg-stone-100 border border-stone-100">
-                         <img 
-                            src={imageSrc} 
-                            alt="Cola Liu" 
-                            className="w-full h-full object-cover object-top" 
-                         />
-                       </div>
+               {/* Framed Photo Container 
+                   Fix: Use w-full + padding-bottom for strict 3:4 aspect ratio in all browsers
+               */}
+               <div className="relative z-10 w-[70%] max-w-[400px] md:max-w-none md:w-[60%] lg:w-[380px] transition-transform duration-700 hover:scale-[1.02]">
+                   {/* Aspect Ratio Box (3:4 = 133.33%) */}
+                   <div className="relative w-full pb-[133.33%]">
+                      {/* Shadow Layer */}
+                      <div className="absolute inset-0 translate-x-4 translate-y-4 bg-black/10 blur-xl rounded-sm"></div>
+                      
+                      {/* White Frame */}
+                      <div className="absolute inset-0 bg-white shadow-2xl p-3 md:p-4 rotate-0 md:rotate-2 hover:rotate-0 transition-all duration-500 ease-out">
+                          {/* The Image */}
+                          <div className="w-full h-full relative overflow-hidden bg-stone-100 border border-stone-100">
+                            <img 
+                                src={imageSrc} 
+                                alt="Cola Liu" 
+                                className="w-full h-full object-cover object-top absolute inset-0" 
+                            />
+                          </div>
+                      </div>
                    </div>
                </div>
            </div>

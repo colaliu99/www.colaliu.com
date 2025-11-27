@@ -80,14 +80,17 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
               className="group cursor-pointer flex flex-col"
               onClick={() => setSelectedItem(work)}
             >
-              {/* Image Container */}
-              <div className="relative overflow-hidden aspect-[4/3] mb-6 bg-neutral-50 border border-neutral-100 shadow-sm transition-all duration-500 group-hover:shadow-xl">
+              {/* Image Container 
+                  Fix: Replaced `aspect-[4/3]` with `pb-[75%]` hack for full browser support.
+                  This ensures 4:3 ratio strictly even in old browsers like 360.
+              */}
+              <div className="relative w-full pb-[75%] mb-6 bg-neutral-50 border border-neutral-100 shadow-sm transition-all duration-500 group-hover:shadow-xl overflow-hidden">
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500"></div>
                 
                 <img 
                   src={work.image} 
                   alt={work.title} 
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-105
+                  className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105
                     ${(work.id === 1 || work.id === 3) ? 'object-contain p-16 bg-white' : ''}
                     ${work.id === 2 ? 'object-cover object-top' : ''}
                     ${(work.id !== 1 && work.id !== 2 && work.id !== 3) ? 'object-cover' : ''}
