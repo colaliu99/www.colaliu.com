@@ -4,7 +4,9 @@ import { ContentData, Language } from './types';
 // ==================================================================================
 // 资源链接 / ASSETS
 // ==================================================================================
-// Local assets (Downloaded via download-images.js)
+// 恢复为本地路径。请确保您的 public/assets/ 文件夹中有这些文件。
+// Restore to local paths. Please ensure these files exist in public/assets/.
+
 export const PROFILE_IMAGE = "assets/profile.jpg"; 
 export const WECHAT_QR = "assets/wechat-qr.png";
 
