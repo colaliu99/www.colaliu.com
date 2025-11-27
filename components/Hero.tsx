@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ content, imageSrc }) => {
     if (!isAutoPlay) return;
     const interval = setInterval(() => {
       setActiveSlide(prev => (prev === 0 ? 1 : 0));
-    }, 8000); 
+    }, 3000); 
     return () => clearInterval(interval);
   }, [isAutoPlay]);
 
