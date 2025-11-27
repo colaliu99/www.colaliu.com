@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ContentData, PortfolioItem } from '../types';
 import { X, ArrowUpRight } from 'lucide-react';
@@ -90,8 +91,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                 <img 
                   src={work.image} 
                   alt={work.title} 
+                  onError={(e) => {
+                    // Smart handling: if image is missing, hide it so it doesn't look broken
+                    (e.target as HTMLImageElement).style.visibility = 'hidden';
+                  }}
                   className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105
-                    ${(work.id === 1 || work.id === 3) ? 'object-contain p-16 bg-white' : ''}
+                    ${(work.id === 1 || work.id === 3) ? 'object-contain p-4 bg-white' : ''}
                     ${work.id === 2 ? 'object-cover object-top' : ''}
                     ${(work.id !== 1 && work.id !== 2 && work.id !== 3) ? 'object-cover' : ''}
                   `}
@@ -145,7 +150,16 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                         <div className="bg-neutral-50 p-4 md:p-16 space-y-16">
                             {selectedItem.gallery.map((img, idx) => (
                             <div key={idx} className="w-full shadow-lg">
-                                <img src={img} alt={`${selectedItem.title} ${idx + 1}`} className="w-full h-auto" loading="lazy" />
+                                <img 
+                                  src={img} 
+                                  alt={`${selectedItem.title} ${idx + 1}`} 
+                                  className="w-full h-auto" 
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    // If gallery image is missing, hide parent container to avoid empty white box
+                                    (e.target as HTMLImageElement).parentElement!.style.display = 'none';
+                                  }}
+                                />
                             </div>
                             ))}
                         </div>
@@ -157,6 +171,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                             <img 
                             src={selectedItem.image} 
                             alt={selectedItem.title} 
+                            onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden'; }}
                             className={`w-full h-full absolute inset-0 
                             ${(selectedItem.id === 1 || selectedItem.id === 3) ? 'object-contain p-20' : ''}
                             ${selectedItem.id === 2 ? 'object-cover object-top' : ''}
