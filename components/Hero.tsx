@@ -65,11 +65,6 @@ const Hero: React.FC<HeroProps> = ({ content, imageSrc }) => {
            {/* Left: Text Content */}
            <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-8 lg:px-24 bg-white z-20 relative order-2 md:order-1">
               <div className="max-w-xl">
-                 <div className="flex items-center gap-3 mb-6 md:mb-10">
-                    <div className="w-8 h-[1px] bg-black"></div>
-                    <span className="text-xs font-bold uppercase tracking-[0.3em] text-neutral-400 font-sans">Portfolio 2025</span>
-                 </div>
-
                  {/* Names Block - Songti */}
                  <div className="mb-6 md:mb-10">
                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-none tracking-tight mb-3 font-serif">

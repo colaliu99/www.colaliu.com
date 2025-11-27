@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  background-color: #ffffff;
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default Headings are Sans-serif (Heiti) for professional look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans SC', 'Inter', sans-serif;
+}
+
+/* Specific Serif class for Logo and Typewriter (Songti) */
+.font-serif {
+  font-family: 'Noto Serif SC', serif !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

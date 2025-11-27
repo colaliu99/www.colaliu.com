@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ContentData, PortfolioItem } from '../types';
-import { X, ImageIcon, ArrowUpRight } from 'lucide-react';
+import { X, ArrowUpRight } from 'lucide-react';
 
 interface PortfolioProps {
   content: ContentData['portfolio'];
