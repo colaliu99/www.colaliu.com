@@ -1,17 +1,19 @@
+
 import { ContentData, Language } from './types';
 
 // ==================================================================================
 // 资源链接 / ASSETS
 // ==================================================================================
-export const PROFILE_IMAGE = "https://i.postimg.cc/D0cZ73YY/5705dabafa41867aae67508a3257bce8.jpg"; 
-export const WECHAT_QR = "https://i.postimg.cc/2jvb6PZr/Screen-Shot-2025-11-21-174929-506.png";
+// Local assets (Downloaded via download-images.js)
+export const PROFILE_IMAGE = "assets/profile.jpg"; 
+export const WECHAT_QR = "assets/wechat-qr.png";
 
 // Lifestyle Images
 const LIFESTYLE_IMGS = {
-  cycling: "https://i.postimg.cc/Gt99zTS4/a2e6531bfd5ab3d768f73c7af6a0406c.jpg",
-  travel: "https://i.postimg.cc/T1hhQ5H2/18ba752bc1aadd28b223716c05903d3d.jpg",
-  sports: "https://i.postimg.cc/Zn00jvDS/08b7f5a3e05ee05a6552be5bec42a28c.jpg",
-  life: "https://i.postimg.cc/Y9dh1z8B/6d52bafd84f33d89b8cc2a9e318cf75e.jpg"
+  cycling: "assets/lifestyle-cycling.jpg",
+  travel: "assets/lifestyle-travel.jpg",
+  sports: "assets/lifestyle-sports.jpg",
+  life: "assets/lifestyle-life.jpg"
 };
 
 export const CONTENT: Record<Language, ContentData> = {
@@ -124,7 +126,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "忠诚度营销", 
           year: "2024",
           stats: "1550W+ 参与用户",
-          image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/China_Mobile_logo_%282019%29.svg/1599px-China_Mobile_logo_%282019%29.svg.png?20241018090546",
+          image: "assets/p1-china-mobile.png",
           description: "2024年“网龄成长计划”，将用户时间资产化，通过情感维系与低成本福利实现高留存。",
           details: {
             context: "2024年，中国移动深化“网龄成长计划”（或称网龄回馈计划），核心是根据用户使用移动号码的时长（网龄）提供差异化的专属福利。活动覆盖全国，但具体细则和礼品内容在各省市有所不同。",
@@ -138,7 +140,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "智慧零售战略", 
           year: "2018",
           stats: "10W+ 智能设备",
-          image: "https://i.postimg.cc/zGD8KLvC/c40ac9eb63699cce091459aec714a917.png",
+          image: "assets/p2-ubox-face.png",
           description: "联合推出刷脸支付售货机，技术驱动体验升级，共同抢占无人零售新风口。",
           details: {
             context: "2018年左右，自助售货机运营商友宝（Ubox）积极响应新技术趋势，在其智能售货机上引入了刷脸支付（人脸识别支付）功能，并结合具体的营销活动进行推广，这是当时零售科技领域的前沿探索。",
@@ -152,7 +154,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "O2O场景营销", 
           year: "2019",
           stats: "精准获客渠道",
-          image: "https://i.postimg.cc/y6ZpdpNg/e8fb80fe3550878e3e87c62b4753bfb6.png",
+          image: "assets/p3-ubox-tmall.png",
           description: "打造“线下扫码，1分购得”的轻量化试用模式，高效搜集用户信息和消费数据。",
           details: {
             context: "2018-2019年左右，天猫U先与友宝（Ubox）智能售货机/派样机进行深度合作，在人流密集场景（商场、校园等）放置装有多种试用装的机器，用户可现场扫码支付1分钱获得样品。",
@@ -166,7 +168,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "品牌升级", 
           year: "2016",
           stats: "+200% 销量增长",
-          image: "https://www.winnermedical.cn/Uploads/Temp/image/20211026/61778604016b1.jpg",
+          image: "assets/p4-winner.jpg",
           description: "从B2B制造向B2C消费品牌转型，打造“全棉时代”新增长极。",
           details: {
             context: "2016年，稳健医疗进行了一次重要的品牌战略升级和产品线拓展策划。核心是从传统的B2B医用敷料制造企业，向B2C（面向消费者）的“大健康”领域转型，并通过其核心技术“全棉水刺非织造布”打造明星消费品牌“全棉时代”（PurCotton）。",
@@ -180,25 +182,13 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "友宝全品牌营销视觉", 
           category: "品牌视觉VI", 
           year: "2018",
-          image: "https://i.postimg.cc/288Kxnd3/20251124she-ji-03.jpg",
+          image: "assets/p5-01.jpg",
           gallery: [
-            "https://i.postimg.cc/288Kxnd3/20251124she-ji-03.jpg",
-            "https://i.postimg.cc/kXXpyWNB/20251124she-ji-04.jpg",
-            "https://i.postimg.cc/xTT4PLG8/20251124she-ji-05.jpg",
-            "https://i.postimg.cc/CLLQ4bC1/20251124she-ji-06.jpg",
-            "https://i.postimg.cc/c495k6TH/20251124she-ji-07.jpg",
-            "https://i.postimg.cc/NfJPCLbr/20251124she-ji-08.jpg",
-            "https://i.postimg.cc/3JSbfW94/20251124she-ji-09.jpg",
-            "https://i.postimg.cc/FsWnC1Gc/20251124she-ji-10.jpg",
-            "https://i.postimg.cc/MKPr3Xty/20251124she-ji-11.jpg",
-            "https://i.postimg.cc/15CY74Mr/20251124she-ji-12.jpg",
-            "https://i.postimg.cc/3JSbfW9S/20251124she-ji-13.jpg",
-            "https://i.postimg.cc/FHYCMmnj/20251124she-ji-14.jpg",
-            "https://i.postimg.cc/T3KNzG4x/20251124she-ji-15.jpg",
-            "https://i.postimg.cc/dVgNvXbv/20251124she-ji-16.jpg",
-            "https://i.postimg.cc/JzSYmgfL/20251124she-ji-17.jpg",
-            "https://i.postimg.cc/6pFbwSkq/20251124she-ji-18.jpg",
-            "https://i.postimg.cc/HkFvHKqJ/20251124she-ji-19.jpg"
+            "assets/p5-01.jpg", "assets/p5-02.jpg", "assets/p5-03.jpg", "assets/p5-04.jpg",
+            "assets/p5-05.jpg", "assets/p5-06.jpg", "assets/p5-07.jpg", "assets/p5-08.jpg",
+            "assets/p5-09.jpg", "assets/p5-10.jpg", "assets/p5-11.jpg", "assets/p5-12.jpg",
+            "assets/p5-13.jpg", "assets/p5-14.jpg", "assets/p5-15.jpg", "assets/p5-16.jpg",
+            "assets/p5-17.jpg"
           ],
           description: "VOL.01 | 友宝全品牌体系构建：包括Logo优化、售货机机身贴纸、展会空间及子品牌（友唱/友咖）的视觉统一。",
           details: { 
@@ -212,16 +202,10 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "稳健医疗 | 整合营销视觉及展厅设计", 
           category: "空间与包装", 
           year: "2016",
-          image: "https://i.postimg.cc/bv8bQ9b9/20251124she-ji-26.jpg",
+          image: "assets/p6-01.jpg",
           gallery: [
-            "https://i.postimg.cc/bv8bQ9b9/20251124she-ji-26.jpg",
-            "https://i.postimg.cc/HLH5Q950/20251124she-ji-27.jpg",
-            "https://i.postimg.cc/jjKNz4NH/20251124she-ji-28.jpg",
-            "https://i.postimg.cc/CKYDjsDB/20251124she-ji-29.jpg",
-            "https://i.postimg.cc/25mv47vK/20251124she-ji-30.jpg",
-            "https://i.postimg.cc/5t3zpQqh/20251124she-ji-31.jpg",
-            "https://i.postimg.cc/tg56DnN7/20251124she-ji-32.jpg",
-            "https://i.postimg.cc/wvjmrxw9/20251124she-ji-33.jpg"
+            "assets/p6-01.jpg", "assets/p6-02.jpg", "assets/p6-03.jpg", "assets/p6-04.jpg",
+            "assets/p6-05.jpg", "assets/p6-06.jpg", "assets/p6-07.jpg", "assets/p6-08.jpg"
           ], 
           description: "VOL.02 | 医疗级产品包装规范、企业展厅（D1-D3区域）空间规划及文化墙设计。",
            details: { 
@@ -235,14 +219,10 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "中国农业银行 | 线上线下活动视觉策划", 
           category: "活动视觉策划", 
           year: "2017",
-          image: "https://i.postimg.cc/FFfZFGxj/20251124she-ji-20.jpg", 
+          image: "assets/p7-01.jpg", 
           gallery: [
-            "https://i.postimg.cc/FFfZFGxj/20251124she-ji-20.jpg",
-            "https://i.postimg.cc/HWftr5SM/20251124she-ji-21.jpg",
-            "https://i.postimg.cc/2jPx1vHF/20251124she-ji-22.jpg",
-            "https://i.postimg.cc/y6wTD9fc/20251124she-ji-23.jpg",
-            "https://i.postimg.cc/WpQ7dr9w/20251124she-ji-24.jpg",
-            "https://i.postimg.cc/2jPx1vHH/20251124she-ji-25.jpg"
+            "assets/p7-01.jpg", "assets/p7-02.jpg", "assets/p7-03.jpg",
+            "assets/p7-04.jpg", "assets/p7-05.jpg", "assets/p7-06.jpg"
           ],
           description: "VOL.03 | “网捷贷”H5营销活动主视觉、线下发布会物料、ETC信用卡及节日热点海报设计。",
            details: { 
@@ -256,19 +236,11 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "其他设计合集", 
           category: "多领域设计", 
           year: "2014-2022",
-          image: "https://i.postimg.cc/jSh631sr/20251124she-ji-40.jpg",
+          image: "assets/p8-01.jpg",
           gallery: [
-            "https://i.postimg.cc/jSh631sr/20251124she-ji-40.jpg",
-            "https://i.postimg.cc/QdqgYzj2/20251124she-ji-41.jpg",
-            "https://i.postimg.cc/rw9GZH86/20251124she-ji-42.jpg",
-            "https://i.postimg.cc/L8VkQWHK/20251124she-ji-43.jpg",
-            "https://i.postimg.cc/sgJPHLVz/20251124she-ji-44.jpg",
-            "https://i.postimg.cc/6Q5rkhQD/20251124she-ji-45.jpg",
-            "https://i.postimg.cc/8CPR2b5V/20251124she-ji-46.jpg",
-            "https://i.postimg.cc/FKsyMxRs/20251124she-ji-47.jpg",
-            "https://i.postimg.cc/PqrWgMxP/20251124she-ji-48.jpg",
-            "https://i.postimg.cc/GphFWj2G/20251124she-ji-49.jpg",
-            "https://i.postimg.cc/QMxQ2qt5/20251124she-ji-50.jpg"
+            "assets/p8-01.jpg", "assets/p8-02.jpg", "assets/p8-03.jpg", "assets/p8-04.jpg",
+            "assets/p8-05.jpg", "assets/p8-06.jpg", "assets/p8-07.jpg", "assets/p8-08.jpg",
+            "assets/p8-09.jpg", "assets/p8-10.jpg", "assets/p8-11.jpg"
           ],
           description: "VOL.04 | 包含农业、餐饮、科技等多行业的Logo设计、VI系统、包装插画及IP形象设计精选。",
            details: { 
@@ -394,7 +366,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "Loyalty Marketing", 
           year: "2024",
           stats: "15.5M+ Participants",
-          image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/China_Mobile_logo_%282019%29.svg/1599px-China_Mobile_logo_%282019%29.svg.png?20241018090546",
+          image: "assets/p1-china-mobile.png",
           description: "2024 Tenure Plan: Gamifying user time to boost retention via emotional bonding and benefits.",
           details: {
             context: "China Mobile deepened its 'Tenure Growth Plan' in 2024, providing differentiated benefits based on user tenure to secure loyalty across the nation.",
@@ -408,7 +380,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "Smart Retail", 
           year: "2018",
           stats: "100K+ Devices",
-          image: "https://i.postimg.cc/zGD8KLvC/c40ac9eb63699cce091459aec714a917.png",
+          image: "assets/p2-ubox-face.png",
           description: "Leading the unmanned retail revolution with strategic facial recognition deployment.",
           details: {
             context: "Ubox partnered with Alipay in 2018 to pioneer 'Face Payment' in vending machines, embracing the unmanned retail trend.",
@@ -422,7 +394,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "O2O Marketing", 
           year: "2019",
           stats: "MVP Validated",
-          image: "https://i.postimg.cc/y6ZpdpNg/e8fb80fe3550878e3e87c62b4753bfb6.png",
+          image: "assets/p3-ubox-tmall.png",
           description: "Creating a 'Scan & Get for 0.01 RMB' lightweight sampling model to efficiently collect user data.",
           details: {
             context: "Around 2018-2019, Tmall U-Select partnered deeply with Ubox vending machines in high-traffic areas (malls, campuses). Users could scan and pay 0.01 RMB to get samples instantly.",
@@ -436,7 +408,7 @@ export const CONTENT: Record<Language, ContentData> = {
           category: "Brand Upgrade", 
           year: "2016",
           stats: "+200% Growth",
-          image: "https://www.winnermedical.cn/Uploads/Temp/image/20211026/61778604016b1.jpg",
+          image: "assets/p4-winner.jpg",
           description: "Leveraging 'Medical-Grade' standards to redefine consumer cotton goods.",
           details: {
             context: "Winner Medical transformed from B2B to B2C to capture consumer upgrade opportunities.",
@@ -450,7 +422,7 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "Ubox Full Brand Visuals", 
           category: "Visual Identity", 
           year: "2018",
-          image: "https://i.postimg.cc/288Kxnd3/20251124she-ji-03.jpg",
+          image: "assets/p5-01.jpg",
           description: "VOL.01 | VI system upgrade, exhibition booth design, and visual identity for sub-brands (U-Sing, U-Coffee).",
           details: { context: "Unifying visual identity for rapidly expanding business lines.", strategy: "Established an orange-themed VI system, standardized vending machine stickers, and extended to offline showrooms.", result: "Enhanced brand recognition across 300+ cities." }
         },
@@ -459,7 +431,7 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "Winner Medical | Showroom Design", 
           category: "Space & Packaging", 
           year: "2016",
-          image: "https://i.postimg.cc/bv8bQ9b9/20251124she-ji-26.jpg",
+          image: "assets/p6-01.jpg",
           description: "VOL.02 | Medical-grade packaging standards, corporate culture visualization, and professional showroom (Zones D1-D3) planning.",
            details: { context: "Showcasing professional image as a medical industry leader.", strategy: "Unified medical packaging standards; planned showroom with hospital scenarios (OR, Ward).", result: "Built a professional, trustworthy brand image." }
         },
@@ -468,7 +440,7 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "ABC Bank | Event Visual Strategy", 
           category: "Event Visuals", 
           year: "2017",
-          image: "https://i.postimg.cc/FFfZFGxj/20251124she-ji-20.jpg",
+          image: "assets/p7-01.jpg",
           description: "VOL.03 | Key visuals for 'Net Loan' H5 campaigns, offline press conferences, and festival social media posters.",
            details: { context: "Promoting financial products to younger demographics.", strategy: "Used flat illustrations for H5/Posters; emotional marketing tied to festivals.", result: "Achieved 700K+ clicks and 1M+ exposure on a low budget." }
         },
@@ -477,7 +449,7 @@ export const CONTENT: Record<Language, ContentData> = {
           title: "Other Design Collection", 
           category: "Multidisciplinary Design", 
           year: "2014-2022",
-          image: "https://i.postimg.cc/jSh631sr/20251124she-ji-40.jpg",
+          image: "assets/p8-01.jpg",
           description: "VOL.04 | A curated collection of logos, VI systems, packaging, and IP designs across various industries.",
            details: { context: "Design exploration and practice across diverse sectors such as technology, F&B, and retail.", strategy: "Utilizing various visual techniques including illustration, typography, and 3D rendering tailored to brand attributes.", result: "Delivered high-impact visual solutions for multiple SMEs and new consumer brands." }
         },

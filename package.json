@@ -1,3 +1,4 @@
+
 {
   "name": "cola-portfolio",
   "private": true,
@@ -6,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "download-assets": "node download-images.js"
   },
   "dependencies": {
     "react": "^18.2.0",
