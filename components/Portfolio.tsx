@@ -95,10 +95,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     // Smart handling: if image is missing, hide it so it doesn't look broken
                     (e.target as HTMLImageElement).style.visibility = 'hidden';
                   }}
-                  className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105
-                    ${(work.id === 1 || work.id === 3) ? 'object-contain p-1 bg-white' : ''}
-                    ${work.id === 2 ? 'object-cover object-top' : ''}
-                    ${(work.id !== 1 && work.id !== 2 && work.id !== 3) ? 'object-cover' : ''}
+                  className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 object-cover
+                    ${work.id === 2 ? 'object-top' : ''}
                   `}
                 />
                 
@@ -172,10 +170,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                             src={selectedItem.image} 
                             alt={selectedItem.title} 
                             onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden'; }}
-                            className={`w-full h-full absolute inset-0 
-                            ${(selectedItem.id === 1 || selectedItem.id === 3) ? 'object-contain p-20' : ''}
-                            ${selectedItem.id === 2 ? 'object-cover object-top' : ''}
-                            ${(selectedItem.id !== 1 && selectedItem.id !== 2 && selectedItem.id !== 3) ? 'object-cover' : ''}
+                            className={`w-full h-full absolute inset-0 object-cover
+                            ${selectedItem.id === 2 ? 'object-top' : ''}
                             `}
                             />
                         </div>
