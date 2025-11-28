@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ content, imageSrc }) => {
     if (!isAutoPlay) return;
     const interval = setInterval(() => {
       setActiveSlide(prev => (prev === 0 ? 1 : 0));
-    }, 3000); 
+    }, 4000); // 4 Seconds
     return () => clearInterval(interval);
   }, [isAutoPlay]);
 
@@ -50,6 +50,7 @@ const Hero: React.FC<HeroProps> = ({ content, imageSrc }) => {
       className="relative bg-white pt-20 h-screen min-h-[600px] max-h-[1080px] overflow-hidden border-b border-neutral-100"
       onMouseEnter={() => setIsAutoPlay(false)}
       onMouseLeave={() => setIsAutoPlay(true)}
+      onTouchStart={() => setIsAutoPlay(false)} // Stop autoplay immediately on mobile touch interaction
     >
       {/* Navigation Anchor for #about */}
       <div id="about" className="absolute top-0 left-0 w-full h-0 pointer-events-none" />

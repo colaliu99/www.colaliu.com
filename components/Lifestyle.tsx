@@ -20,24 +20,33 @@ const Lifestyle: React.FC<LifestyleProps> = ({ content }) => {
           </div>
         </div>
 
-        {/* Bento Grid - Full Color */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
-            {/* Large Item (Cycling) */}
-            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden">
+        {/* Bento Grid */}
+        {/* Mobile: grid-cols-2 with explicit ordering to make layout compact [Big] -> [Small][Small] -> [Tall] */}
+        {/* Desktop: grid-cols-4 standard bento layout */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
+            
+            {/* 1. Large Item (Cycling) 
+                Mobile: Order 1, Full Width, h-60
+                Desktop: Order None (natural), 2x2, h-full
+            */}
+            <div className="col-span-2 md:col-span-2 md:row-span-2 relative group overflow-hidden h-60 md:h-auto order-1 md:order-none">
                 <img 
                     src={content.items[0].image} 
                     alt={content.items[0].title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-8">
+                <div className="absolute bottom-0 left-0 p-6 md:p-8">
                     <span className="text-[10px] font-bold text-white uppercase tracking-widest mb-2 block border-l-2 border-white pl-2">Passion</span>
-                    <h3 className="text-3xl font-serif font-bold text-white italic">{content.items[0].title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white italic">{content.items[0].title}</h3>
                 </div>
             </div>
 
-            {/* Tall Item (Life) */}
-            <div className="md:col-span-1 md:row-span-2 relative group overflow-hidden bg-neutral-100">
+            {/* 4. Tall Item (Life) 
+                Mobile: Order 4 (Bottom), Full Width, h-80 (Tall but controlled)
+                Desktop: Order None (natural), 1x2, h-full
+            */}
+            <div className="col-span-2 md:col-span-1 md:row-span-2 relative group overflow-hidden bg-neutral-100 h-80 md:h-auto order-4 md:order-none">
                 <img 
                     src={content.items[3].image} 
                     alt={content.items[3].title} 
@@ -49,8 +58,11 @@ const Lifestyle: React.FC<LifestyleProps> = ({ content }) => {
                 </div>
             </div>
 
-            {/* Small Item 1 (Travel) */}
-            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-neutral-100">
+            {/* 2. Small Item 1 (Travel) 
+                Mobile: Order 2, 1 Column, h-40
+                Desktop: Order None, 1x1, h-full
+            */}
+            <div className="col-span-1 md:col-span-1 md:row-span-1 relative group overflow-hidden bg-neutral-100 h-40 md:h-auto order-2 md:order-none">
                 <img 
                     src={content.items[1].image} 
                     alt={content.items[1].title} 
@@ -61,8 +73,11 @@ const Lifestyle: React.FC<LifestyleProps> = ({ content }) => {
                 </div>
             </div>
 
-            {/* Small Item 2 (Sports) */}
-            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-neutral-100">
+            {/* 3. Small Item 2 (Sports) 
+                Mobile: Order 3, 1 Column, h-40
+                Desktop: Order None, 1x1, h-full
+            */}
+            <div className="col-span-1 md:col-span-1 md:row-span-1 relative group overflow-hidden bg-neutral-100 h-40 md:h-auto order-3 md:order-none">
                 <img 
                     src={content.items[2].image} 
                     alt={content.items[2].title} 
