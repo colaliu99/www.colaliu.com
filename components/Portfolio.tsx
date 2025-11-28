@@ -181,19 +181,19 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                         </div>
                     </div>
                 ) : (
-                    // MARKETING MODE
+                    // MARKETING MODE - REDESIGNED
                     <div className="flex flex-col lg:flex-row min-h-full">
-                        <div className="w-full lg:w-1/2 bg-neutral-100 relative min-h-[300px] lg:min-h-full border-r border-neutral-100">
+                        {/* Image Side: Flex container for centering, no crop */}
+                        <div className="w-full lg:w-1/2 bg-stone-100 relative min-h-[300px] lg:min-h-full border-r border-neutral-100 flex items-center justify-center p-0 md:p-12">
                             <img 
                             src={selectedItem.image} 
                             alt={selectedItem.title} 
                             onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden'; }}
-                            className={`w-full h-full absolute inset-0 object-cover
-                            ${selectedItem.id === 2 ? 'object-top' : ''}
-                            `}
+                            className="w-full h-auto max-w-full max-h-[80vh] object-contain shadow-lg"
                             />
                         </div>
 
+                        {/* Text Side */}
                         <div className="w-full lg:w-1/2 p-8 lg:p-16 bg-white overflow-y-auto">
                             <div className="mb-12 border-b border-black pb-8">
                                 <h4 className="text-xs font-bold text-neutral-400 uppercase tracking-[0.2em] mb-4 font-sans">Case Study</h4>
