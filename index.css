@@ -15,9 +15,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Sans SC', 'Inter', sans-serif;
 }
 
-/* Specific Serif class for Logo and Typewriter (Songti) */
+/* Specific Serif class for Logo and Typewriter (Songti) 
+   Updated to include 'Songti SC' for iOS native support
+*/
 .font-serif {
-  font-family: 'Noto Serif SC', serif !important;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif !important;
 }
 
 /* Custom Scrollbar */

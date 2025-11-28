@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
-        serif: ['Noto Serif SC', 'serif'],
+        // Added 'Songti SC' (iOS), 'STSong', 'SimSun' (Windows) for better cross-platform support
+        serif: ['Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', 'serif'],
       },
     },
   },
