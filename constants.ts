@@ -120,6 +120,7 @@ export const CONTENT: Record<Language, ContentData> = {
       title: "精选作品",
       designTab: "视觉设计",
       marketingTab: "营销策划",
+      viewProject: "查看详情",
       items: [
         // MARKETING CASES (ZH)
         { 
@@ -360,6 +361,7 @@ export const CONTENT: Record<Language, ContentData> = {
       title: "Selected Works",
       designTab: "Visual Design",
       marketingTab: "Marketing Strategy",
+      viewProject: "View Project",
       items: [
         // Marketing Cases (EN Mirror)
         { 

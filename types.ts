@@ -83,6 +83,7 @@ export interface ContentData {
     title: string;
     designTab: string;
     marketingTab: string;
+    viewProject: string;
     items: PortfolioItem[];
   };
   lifestyle: {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ContentData, PortfolioItem } from '../types';
-import { X, ArrowUpRight } from 'lucide-react';
+import { X, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 interface PortfolioProps {
   content: ContentData['portfolio'];
@@ -82,7 +82,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
              return (
               <div 
                 key={work.id} 
-                className="group cursor-pointer flex flex-col"
+                className="group cursor-pointer flex flex-col h-full"
                 onClick={() => setSelectedItem(work)}
               >
                 {/* Image Container 
@@ -101,8 +101,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     }}
                     className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 
                       ${isGraphicCase 
-                        ? 'object-contain bg-neutral-50'  // ID 1 & 3: Contain logic, NO padding to maximize size
-                        : 'object-cover'                  // Others: Cover logic
+                        ? 'object-contain p-2 bg-neutral-50'  // ID 1 & 3: Contain logic with slight padding for air
+                        : 'object-cover'                        // Others: Cover logic
                       }
                       ${work.id === 2 ? 'object-top' : ''}      // ID 2 (Face): Focus on top
                     `}
@@ -115,16 +115,23 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                 </div>
 
                 {/* Text Content */}
-                <div className="flex flex-col">
+                <div className="flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-medium text-black group-hover:underline decoration-1 underline-offset-4 font-serif">{work.title}</h3>
                     <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1 border border-neutral-200 px-2 py-0.5 font-sans">{work.year}</span>
                   </div>
                   
                   <p className="text-xs font-bold text-neutral-500 uppercase tracking-wide mb-3 font-sans">{work.category}</p>
-                  <p className="text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans">
+                  <p className="text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans mb-4">
                     {work.description}
                   </p>
+
+                  {/* View Details Button */}
+                  <div className="mt-auto pt-2">
+                    <button className="flex items-center gap-2 text-xs font-bold text-black uppercase tracking-widest border border-neutral-200 px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 font-sans group-hover:border-black">
+                      {content.viewProject} <ArrowRight size={14} />
+                    </button>
+                  </div>
                 </div>
               </div>
             );
