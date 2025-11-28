@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ContentData, PortfolioItem } from '../types';
 import { X, ArrowUpRight } from 'lucide-react';
@@ -75,51 +74,61 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
 
         {/* Grid - Full Color */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 animate-in fade-in duration-500">
-          {works[activeTab].map((work) => (
-            <div 
-              key={work.id} 
-              className="group cursor-pointer flex flex-col"
-              onClick={() => setSelectedItem(work)}
-            >
-              {/* Image Container 
-                  Fix: Replaced `aspect-[4/3]` with `pb-[75%]` hack for full browser support.
-                  This ensures 4:3 ratio strictly even in old browsers like 360.
-              */}
-              <div className="relative w-full pb-[75%] mb-6 bg-neutral-50 border border-neutral-100 shadow-sm transition-all duration-500 group-hover:shadow-xl overflow-hidden">
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500"></div>
-                
-                <img 
-                  src={work.image} 
-                  alt={work.title} 
-                  onError={(e) => {
-                    // Smart handling: if image is missing, hide it so it doesn't look broken
-                    (e.target as HTMLImageElement).style.visibility = 'hidden';
-                  }}
-                  className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 object-cover
-                    ${work.id === 2 ? 'object-top' : ''}
-                  `}
-                />
-                
-                {/* Overlay Icon */}
-                <div className="absolute top-4 right-4 bg-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 shadow-sm">
-                    <ArrowUpRight size={16} />
-                </div>
-              </div>
+          {works[activeTab].map((work) => {
+             // Logic: ID 1 (China Mobile) and ID 3 (Tmall) need to show full content (contain).
+             // Others fill the box (cover).
+             const isGraphicCase = work.id === 1 || work.id === 3;
 
-              {/* Text Content */}
-              <div className="flex flex-col">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-medium text-black group-hover:underline decoration-1 underline-offset-4 font-serif">{work.title}</h3>
-                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1 border border-neutral-200 px-2 py-0.5 font-sans">{work.year}</span>
+             return (
+              <div 
+                key={work.id} 
+                className="group cursor-pointer flex flex-col"
+                onClick={() => setSelectedItem(work)}
+              >
+                {/* Image Container 
+                    Fixed Aspect Ratio (4:3) using pb-[75%]
+                    This ensures the WINDOW size is always identical.
+                */}
+                <div className="relative w-full pb-[75%] mb-6 bg-neutral-50 border border-neutral-100 shadow-sm transition-all duration-500 group-hover:shadow-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500"></div>
+                  
+                  <img 
+                    src={work.image} 
+                    alt={work.title} 
+                    onError={(e) => {
+                      // Smart handling: if image is missing, hide it so it doesn't look broken
+                      (e.target as HTMLImageElement).style.visibility = 'hidden';
+                    }}
+                    className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 
+                      ${isGraphicCase 
+                        ? 'object-contain p-2 bg-neutral-50'  // ID 1 & 3: Fit inside (contain), show full content, light grey bg
+                        : 'object-cover'                        // Others: Fill the box (cover)
+                      }
+                      ${work.id === 2 ? 'object-top' : ''}      // ID 2 (Face): Focus on top
+                    `}
+                  />
+                  
+                  {/* Overlay Icon */}
+                  <div className="absolute top-4 right-4 bg-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 shadow-sm">
+                      <ArrowUpRight size={16} />
+                  </div>
                 </div>
-                
-                <p className="text-xs font-bold text-neutral-500 uppercase tracking-wide mb-3 font-sans">{work.category}</p>
-                <p className="text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans">
-                  {work.description}
-                </p>
+
+                {/* Text Content */}
+                <div className="flex flex-col">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-medium text-black group-hover:underline decoration-1 underline-offset-4 font-serif">{work.title}</h3>
+                    <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1 border border-neutral-200 px-2 py-0.5 font-sans">{work.year}</span>
+                  </div>
+                  
+                  <p className="text-xs font-bold text-neutral-500 uppercase tracking-wide mb-3 font-sans">{work.category}</p>
+                  <p className="text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans">
+                    {work.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Modal */}
