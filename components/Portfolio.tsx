@@ -96,13 +96,13 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     src={work.image} 
                     alt={work.title} 
                     onError={(e) => {
-                      // Smart handling: if image is missing, hide it so it doesn't look broken
+                      // Smart handling: if image is missing, hide the image element
                       (e.target as HTMLImageElement).style.visibility = 'hidden';
                     }}
                     className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 
                       ${isGraphicCase 
-                        ? 'object-contain p-2 bg-neutral-50'  // ID 1 & 3: Contain logic with minimal padding
-                        : 'object-cover'                        // Others: Cover logic
+                        ? 'object-contain bg-neutral-50'  // ID 1 & 3: Contain logic, NO padding to maximize size
+                        : 'object-cover'                  // Others: Cover logic
                       }
                       ${work.id === 2 ? 'object-top' : ''}      // ID 2 (Face): Focus on top
                     `}
@@ -156,14 +156,14 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                         </div>
                         <div className="bg-neutral-50 p-4 md:p-16 space-y-16">
                             {selectedItem.gallery.map((img, idx) => (
-                            <div key={idx} className="w-full shadow-lg">
+                            <div key={idx} className="w-full shadow-lg transition-opacity duration-300">
                                 <img 
                                   src={img} 
                                   alt={`${selectedItem.title} ${idx + 1}`} 
                                   className="w-full h-auto" 
                                   loading="lazy"
                                   onError={(e) => {
-                                    // CRITICAL FIX: If gallery image is missing (e.g. p5-11), hide the entire container.
+                                    // CRITICAL FIX: If gallery image is missing (e.g. p5-11), hide the entire container div.
                                     // This prevents the broken image icon and empty white boxes.
                                     const parent = (e.target as HTMLImageElement).parentElement;
                                     if (parent) parent.style.display = 'none';
