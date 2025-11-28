@@ -71,8 +71,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
           </div>
         </div>
 
-        {/* Grid - Mobile: 2 Cols, Desktop: 2 Cols */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-12 gap-y-8 md:gap-y-20 animate-in fade-in duration-500">
+        {/* Grid - Mobile: 1 Col (Stack), Desktop: 2 Cols */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-12 gap-y-12 md:gap-y-20 animate-in fade-in duration-500">
           {works[activeTab].map((work) => {
              // Logic: ID 1 (China Mobile) and ID 3 (Tmall) need to show full content (contain).
              // Others fill the box (cover).
@@ -116,21 +116,21 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                 {/* Text Content */}
                 <div className="flex flex-col flex-grow">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1 md:mb-2">
-                    <h3 className="text-sm md:text-xl font-medium text-black group-hover:underline decoration-1 underline-offset-4 font-serif leading-tight">{work.title}</h3>
-                    <span className="text-[9px] md:text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1 border border-neutral-200 px-1 md:px-2 py-0.5 font-sans self-start md:self-auto">{work.year}</span>
+                    <h3 className="text-xl md:text-xl font-medium text-black group-hover:underline decoration-1 underline-offset-4 font-serif leading-tight">{work.title}</h3>
+                    <span className="text-[10px] md:text-[10px] font-bold text-neutral-400 uppercase tracking-widest mt-1 border border-neutral-200 px-2 md:px-2 py-0.5 font-sans self-start md:self-auto">{work.year}</span>
                   </div>
                   
-                  <p className="text-[10px] md:text-xs font-bold text-neutral-500 uppercase tracking-wide mb-2 md:mb-3 font-sans truncate">{work.category}</p>
+                  <p className="text-xs md:text-xs font-bold text-neutral-500 uppercase tracking-wide mb-3 md:mb-3 font-sans truncate">{work.category}</p>
                   
-                  {/* Hidden on Mobile for cleaner double-column layout */}
-                  <p className="hidden md:block text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans mb-4">
+                  {/* Description restored on Mobile since we have space in 1-col layout */}
+                  <p className="text-neutral-600 font-light text-sm leading-relaxed line-clamp-2 font-sans mb-4">
                     {work.description}
                   </p>
 
                   {/* View Details Button - Enhanced Design */}
                   <div className="mt-auto pt-2">
-                    <button className="w-full md:w-auto flex items-center justify-center md:justify-start gap-1 md:gap-2 text-[10px] md:text-xs font-bold text-black uppercase tracking-widest border border-neutral-200 px-3 md:px-5 py-2 md:py-3 hover:bg-stone-900 hover:border-stone-900 hover:text-white transition-all duration-300 font-serif group-hover:border-black group-hover:translate-x-1">
-                      {content.viewProject} <ArrowRight size={12} className="md:hidden" /> <ArrowRight size={14} className="hidden md:block group-hover:translate-x-1 transition-transform" />
+                    <button className="w-auto flex items-center justify-start gap-2 text-[10px] md:text-xs font-bold text-black uppercase tracking-widest border border-neutral-200 px-5 py-3 hover:bg-stone-900 hover:border-stone-900 hover:text-white transition-all duration-300 font-serif group-hover:border-black group-hover:translate-x-1">
+                      {content.viewProject} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
