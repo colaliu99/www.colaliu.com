@@ -96,7 +96,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     (e.target as HTMLImageElement).style.visibility = 'hidden';
                   }}
                   className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105
-                    ${(work.id === 1 || work.id === 3) ? 'object-contain p-4 bg-white' : ''}
+                    ${(work.id === 1 || work.id === 3) ? 'object-contain p-1 bg-white' : ''}
                     ${work.id === 2 ? 'object-cover object-top' : ''}
                     ${(work.id !== 1 && work.id !== 2 && work.id !== 3) ? 'object-cover' : ''}
                   `}
