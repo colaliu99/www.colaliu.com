@@ -126,10 +126,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     {work.description}
                   </p>
 
-                  {/* View Details Button */}
+                  {/* View Details Button - Enhanced Design */}
                   <div className="mt-auto pt-2">
-                    <button className="flex items-center gap-2 text-xs font-bold text-black uppercase tracking-widest border border-neutral-200 px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 font-sans group-hover:border-black">
-                      {content.viewProject} <ArrowRight size={14} />
+                    <button className="flex items-center gap-2 text-xs font-bold text-black uppercase tracking-widest border border-neutral-200 px-5 py-3 hover:bg-stone-900 hover:border-stone-900 hover:text-white transition-all duration-300 font-serif group-hover:border-black group-hover:translate-x-1">
+                      {content.viewProject} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
