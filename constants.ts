@@ -68,7 +68,8 @@ export const CONTENT: Record<Language, ContentData> = {
       items: [
         { project: "友宝UBOX", label: "战略项目覆盖规模", value: "100K+", subLabel: "智能设备投放量" },
         { project: "中国移动", label: "核心用户资产增值", value: "1550W+", subLabel: "“网龄活动”用户数" },
-        { project: "稳健医疗", label: "品牌升级商业价值", value: "+200%", subLabel: "品牌升级首季销量" }
+        { project: "稳健医疗", label: "品牌升级商业价值", value: "+200%", subLabel: "品牌升级首季销量" },
+        { project: "亚信科技", label: "B端交付质量", value: "98%", subLabel: "客户满意度 (Top Tier)" }
       ]
     },
     experience: {
@@ -309,7 +310,8 @@ export const CONTENT: Record<Language, ContentData> = {
       items: [
         { project: "Ubox Tech", label: "Strategy Coverage", value: "100K+", subLabel: "Smart Devices" },
         { project: "China Mobile", label: "User Asset Growth", value: "1550W+", subLabel: "Participants" },
-        { project: "Winner Medical", label: "Brand Value", value: "+200%", subLabel: "Sales Growth" }
+        { project: "Winner Medical", label: "Brand Value", value: "+200%", subLabel: "Sales Growth" },
+        { project: "AsiaInfo Tech", label: "Delivery Quality", value: "98%", subLabel: "Customer Satisfaction" }
       ]
     },
     experience: {
