@@ -101,8 +101,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     }}
                     className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 
                       ${isGraphicCase 
-                        ? 'object-contain p-1 bg-neutral-50'  // ID 1 & 3: Contain logic - Fits image inside, maintaining aspect ratio. p-1 for minimal padding.
-                        : 'object-cover'                        // Others: Cover logic - Fills the box.
+                        ? 'object-contain p-2 bg-neutral-50'  // ID 1 & 3: Contain logic with minimal padding
+                        : 'object-cover'                        // Others: Cover logic
                       }
                       ${work.id === 2 ? 'object-top' : ''}      // ID 2 (Face): Focus on top
                     `}
@@ -163,8 +163,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                                   className="w-full h-auto" 
                                   loading="lazy"
                                   onError={(e) => {
-                                    // If gallery image is missing, hide parent container to avoid empty white box
-                                    (e.target as HTMLImageElement).parentElement!.style.display = 'none';
+                                    // CRITICAL FIX: If gallery image is missing (e.g. p5-11), hide the entire container.
+                                    // This prevents the broken image icon and empty white boxes.
+                                    const parent = (e.target as HTMLImageElement).parentElement;
+                                    if (parent) parent.style.display = 'none';
                                   }}
                                 />
                             </div>
