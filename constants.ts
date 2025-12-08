@@ -57,9 +57,9 @@ export const CONTENT: Record<Language, ContentData> = {
       title: "生活与热爱",
       subtitle: "不止于工作，更在于探索世界。",
       items: [
-        { title: "骑行", description: "在风中感受城市的脉搏", image: LIFESTYLE_IMGS.cycling, size: "large" },
+        { title: "运动", description: "保持向上的生命力", image: LIFESTYLE_IMGS.sports, size: "large" },
         { title: "旅行", description: "探索未知的风景", image: LIFESTYLE_IMGS.travel, size: "small" },
-        { title: "运动", description: "保持向上的生命力", image: LIFESTYLE_IMGS.sports, size: "small" },
+        { title: "骑行", description: "在风中感受城市的脉搏", image: LIFESTYLE_IMGS.cycling, size: "small" },
         { title: "生活", description: "在伦敦大本钟晨跑", image: LIFESTYLE_IMGS.life, size: "tall" }
       ]
     },
@@ -299,9 +299,9 @@ export const CONTENT: Record<Language, ContentData> = {
       title: "Life & Passion",
       subtitle: "Exploring the world beyond work.",
       items: [
-        { title: "Cycling", description: "Feeling the pulse of the city", image: LIFESTYLE_IMGS.cycling, size: "large" },
+        { title: "Sports", description: "Keeping the vitality up", image: LIFESTYLE_IMGS.sports, size: "large" },
         { title: "Travel", description: "Exploring unknown sceneries", image: LIFESTYLE_IMGS.travel, size: "small" },
-        { title: "Sports", description: "Keeping the vitality up", image: LIFESTYLE_IMGS.sports, size: "small" },
+        { title: "Cycling", description: "Feeling the pulse of the city", image: LIFESTYLE_IMGS.cycling, size: "small" },
         { title: "Life", description: "Morning run at Big Ben, London", image: LIFESTYLE_IMGS.life, size: "tall" }
       ]
     },
