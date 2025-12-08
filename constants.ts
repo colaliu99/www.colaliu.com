@@ -30,7 +30,7 @@ export const CONTENT: Record<Language, ContentData> = {
     hero: {
       nameZh: "刘嘉欣",
       nameEn: "Cola Liu",
-      role: "品牌运营负责人",
+      role: "运营/项目负责人",
       prefix: "将利他融入", 
       typewriterPhrases: [
         "营销策划",
@@ -51,7 +51,7 @@ export const CONTENT: Record<Language, ContentData> = {
         { name: "AIPL增长", detail: "全链路营销策略" },
         { name: "跨职能领导", detail: "甲乙方双重视角" }
       ],
-      personalDescription: "拥有10年+品牌全案与营销战略经验，深耕新消费+科技赛道。"
+      personalDescription: "拥有10年+市场品牌全案与营销战略经验，深耕新消费+科技赛道。远程兼任留学中介和上家公司项目顾问半年。"
     },
     lifestyle: {
       title: "生活与热爱",
@@ -272,7 +272,7 @@ export const CONTENT: Record<Language, ContentData> = {
     hero: {
       nameZh: "刘嘉欣",
       nameEn: "Cola Liu",
-      role: "Brand Operation Manager",
+      role: "Operation / Project Manager",
       prefix: "Integrating Altruism into",
       typewriterPhrases: [
         "Marketing Strategy",
@@ -293,7 +293,7 @@ export const CONTENT: Record<Language, ContentData> = {
         { name: "AIPL Growth", detail: "Full-Funnel Marketing" },
         { name: "Leadership", detail: "Cross-Functional" }
       ],
-      personalDescription: "10+ years of experience in brand strategy & marketing, focusing on New Consumption + Tech."
+      personalDescription: "10+ years of experience in market brand strategy & marketing, focusing on New Consumption + Tech. Remotely served as a consultant for study abroad agencies and previous company projects for 6 months."
     },
     lifestyle: {
       title: "Life & Passion",
