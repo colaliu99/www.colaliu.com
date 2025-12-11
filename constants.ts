@@ -30,7 +30,7 @@ export const CONTENT: Record<Language, ContentData> = {
     hero: {
       nameZh: "刘嘉欣",
       nameEn: "Cola Liu",
-      role: "运营/项目负责人",
+      role: "品牌运营负责人",
       prefix: "将利他融入", 
       typewriterPhrases: [
         "营销策划",
@@ -51,7 +51,7 @@ export const CONTENT: Record<Language, ContentData> = {
         { name: "AIPL增长", detail: "全链路营销策略" },
         { name: "跨职能领导", detail: "甲乙方双重视角" }
       ],
-      personalDescription: "拥有10年+市场品牌全案与营销战略经验，深耕新消费+科技赛道。远程兼任留学中介和上家公司项目顾问半年。"
+      personalDescription: "拥有10年+经验的实战型职场人，核心优势在于 “能直接下场实操干活”，同时擅长建立 “体系化SOP和数据闭环” 进行宏观管理和多项目组合控制。"
     },
     lifestyle: {
       title: "生活与热爱",
@@ -90,29 +90,29 @@ export const CONTENT: Record<Language, ContentData> = {
           role: "项目经理 | Project Manager",
           period: "2022.06 - 2024.08",
           highlights: [
-            "主导核心省级APP向全国统一APP数字化转型项目，实现300W+用户规模化迁移，转化率长期位列全国前五。",
-            "策划“移动2024网龄活动”年度增长策略，达成参与人数1550W+，有效APP激活200W+，显著提升核心用户资产价值。",
-            "精益管理20人运营团队，建立高标准交付流程，确保客户满意度指标连续保持98%（全国运营第一梯队）。"
+            "项目全生命周期管理：负责投标新项目、运营管理及深度回款；建立高标准SOP流程，精益管理20人团队，运营双微一抖及视频号等全渠道，客户满意度长期保持98%。",
+            "数字化转型实操：主导省级APP向全国统一APP迁移，负责链路转化分析及数据复盘，实现300W+用户规模化迁移，转化率位列全国前五。",
+            "亿级活动运营：策划“移动2024网龄活动”，通过精细化数据运营，达成1550W+用户参与，有效激活200W+沉睡用户。"
           ]
         },
         {
           company: "友宝科斯科技 (上市公司)",
-          role: "策划经理 (品牌部)",
+          role: "品牌策划经理 | Planning Manager",
           period: "2018.03 - 2022.06",
           highlights: [
-            "策划部署与支付宝的全国级战略合作“刷脸支付”，在300+城市部署10W+智能设备，迅速建立市场领导地位。",
-            "推动集团多品牌（友宝、友咖、友唱等）从0-1到1-N的完整品牌体系构建。",
-            "整合营销策划执行多项异业合作，其中与华为联合推广活动荣获“年度最佳移动整合营销奖”。"
+            "战略落地执行：统筹支付宝“刷脸支付”全国推广，在300+城市部署10W+智能终端，快速抢占无人零售ToB市场心智。",
+            "多品牌体系搭建：负责集团多品牌（友宝/友咖/友唱）从0到1的品牌视觉与营销体系构建，统一管理数十个子品牌VIS及部门规划。",
+            "整合营销实战：策划执行与天猫U先、华为等巨头的异业合作，落地百场快闪及千场校园/商圈活动，通过终端数据采集构建行业壁垒。"
           ]
         },
         {
           company: "与行品牌管理有限公司",
-          role: "视觉设计主管",
+          role: "视觉设计主管 | Visual Design Supervisor",
           period: "2014.11 - 2018.03",
           highlights: [
-            "制定并交付母婴、医疗、金融等多行业客户品牌0-10全案策略，搭建双微一抖快等主流内容阵地。",
-            "推动稳健医疗全线产品品牌视觉升级（完成6个系列近50+产品包装），产品销量在上线首季同比实现+200%增长。",
-            "策划农业银行网捷贷H5营销活动，在低预算下实现100W+曝光和70W+点击。"
+            "全链路品牌运营：为母婴、医疗、金融等多行业客户制定0-10全案策略，搭建并运营主流内容阵地，构建完整的种草转化体系。",
+            "视觉驱动商业增长：推动稳健医疗全线产品（50+ SKU）视觉升级，助力产品上线首季销量同比增长200%。",
+            "低成本高回报实操：策划农业银行“网捷贷”H5活动，在低预算下实现100W+曝光与70W+点击，超额完成金融产品获客目标。"
           ]
         }
       ]
@@ -272,7 +272,7 @@ export const CONTENT: Record<Language, ContentData> = {
     hero: {
       nameZh: "刘嘉欣",
       nameEn: "Cola Liu",
-      role: "Operation / Project Manager",
+      role: "Brand Operation Manager",
       prefix: "Integrating Altruism into",
       typewriterPhrases: [
         "Marketing Strategy",
@@ -293,7 +293,7 @@ export const CONTENT: Record<Language, ContentData> = {
         { name: "AIPL Growth", detail: "Full-Funnel Marketing" },
         { name: "Leadership", detail: "Cross-Functional" }
       ],
-      personalDescription: "10+ years of experience in market brand strategy & marketing, focusing on New Consumption + Tech. Remotely served as a consultant for study abroad agencies and previous company projects for 6 months."
+      personalDescription: "A practical professional with 10+ years of experience. Core strengths lie in hands-on execution while excelling at building systematic SOPs and data closed-loops for macro management and portfolio control."
     },
     lifestyle: {
       title: "Life & Passion",
@@ -332,9 +332,9 @@ export const CONTENT: Record<Language, ContentData> = {
           role: "Project Manager",
           period: "2022.06 - 2024.08",
           highlights: [
-            "Led digital transformation of provincial APP to national APP, migrating 3M+ users; conversion rates ranked top 5 nationally.",
-            "Planned 'Mobile 2024 Tenure Campaign' achieving 15.5M+ participants and reactivating 2M+ users, significantly boosting user asset value.",
-            "Managed a 20-person team with lean management, maintaining 98% customer satisfaction (top tier nationally)."
+            "Lifecycle Management: Responsible for bidding, operations, and collection. Built high-standard SOPs, managed a 20-person team, and operated omni-channel platforms (WeChat/Douyin), maintaining 98% customer satisfaction.",
+            "Digital Transformation: Led the migration of provincial APP to national APP, managing data analysis and review, achieving 3M+ user migration with conversion rates ranked top 5 nationally.",
+            "Campaign Operations: Planned 'Mobile 2024 Tenure Campaign', engaging 15.5M+ users and reactivating 2M+ dormant users through precise data operations."
           ]
         },
         {
@@ -342,9 +342,9 @@ export const CONTENT: Record<Language, ContentData> = {
           role: "Planning Manager",
           period: "2018.03 - 2022.06",
           highlights: [
-            "Strategized 'Face Payment' cooperation with Alipay, deploying 100K+ devices across 300+ cities.",
-            "Built comprehensive brand systems for multiple sub-brands (Ubox, U-Coffee, U-Sing) from 0-1 to 1-N.",
-            "Executed cross-industry marketing; won 'Best Mobile Integrated Marketing Award' for Huawei joint campaign."
+            "Strategic Execution: Managed nationwide 'Face Payment' rollout with Alipay, deploying 100K+ devices in 300+ cities to dominate the ToB unmanned retail market.",
+            "Brand System Construction: Built 0-1 brand visual and marketing systems for multiple sub-brands (Ubox, U-Coffee, U-Sing), managing VIS and planning for dozens of sub-brands.",
+            "Integrated Marketing: Executed cross-industry cooperations with Tmall U-Select and Huawei, delivering 100+ pop-up stores and 1000+ campus events."
           ]
         },
         {
@@ -352,9 +352,9 @@ export const CONTENT: Record<Language, ContentData> = {
           role: "Visual Design Supervisor",
           period: "2014.11 - 2018.03",
           highlights: [
-            "Delivered 0-10 brand strategies for healthcare/finance clients; built content matrix across major social platforms.",
-            "Led visual upgrade for Winner Medical (50+ SKUs), resulting in 200% YoY sales growth in the first quarter.",
-            "Planned ABC 'Net Loan' H5 campaign, achieving 1M+ exposure and 700K+ clicks on a low budget."
+            "Full-Funnel Operations: Developed 0-10 strategies for healthcare/finance clients, building content matrices across major social platforms to drive brand volume and conversion.",
+            "Visual-Driven Growth: Led visual upgrade for Winner Medical (50+ SKUs), contributing to a 200% YoY sales increase in the first quarter.",
+            "High ROI Execution: Planned ABC Bank 'Net Loan' H5 campaign, achieving 1M+ exposure and 700K+ clicks on a low budget, exceeding acquisition targets."
           ]
         }
       ]
