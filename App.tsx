@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Services from './components/Services';
 import Stats from './components/Stats';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
@@ -17,9 +19,10 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar lang={lang} setLang={setLang} content={content.nav} />
       <Hero content={content.hero} imageSrc={PROFILE_IMAGE} />
+      <Services content={content.services} />
       <Stats content={content.stats} />
-      <Experience content={content.experience} />
       <Portfolio content={content.portfolio} />
+      <Experience content={content.experience} />
       <Lifestyle content={content.lifestyle} />
       <Footer content={content.contact} />
     </div>

@@ -1,3 +1,4 @@
+
 export type Language = 'zh' | 'en';
 
 export interface ExperienceItem {
@@ -12,6 +13,13 @@ export interface StatItem {
   label: string;
   value: string;
   subLabel?: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  description: string;
+  deliverables: string[];
+  icon: string;
 }
 
 export interface EducationItem {
@@ -51,6 +59,7 @@ export interface PortfolioItem {
 
 export interface ContentData {
   nav: {
+    services: string;
     design: string;
     marketing: string;
     lifestyle: string;
@@ -70,6 +79,11 @@ export interface ContentData {
     certificationTitle: string;
     certifications: CertificationItem[];
     personalDescription: string;
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    items: ServiceItem[];
   };
   stats: {
     title: string;
@@ -95,5 +109,6 @@ export interface ContentData {
     title: string;
     email: string;
     phone: string;
+    bookingLabel: string;
   };
 }
