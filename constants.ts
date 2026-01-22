@@ -41,7 +41,7 @@ export const CONTENT: Record<Language, ContentData> = {
       wechatLabel: "扫码加微信",
       educationTitle: "教育背景",
       education: [
-        { school: "英迪国际大学", degree: "工商管理硕士 (MBA)", year: "2025应届" },
+        { school: "英迪国际大学", degree: "工商管理硕士 (MBA)" },
         { school: "北京外国语大学", degree: "工商管理本科" }
       ],
       certificationTitle: "核心能力",
@@ -73,7 +73,7 @@ export const CONTENT: Record<Language, ContentData> = {
       ]
     },
     experience: {
-      title: "工作经验",
+      title: "核心项目经验",
       items: [
         {
           company: "全球视野与职业发展项目",
@@ -149,7 +149,7 @@ export const CONTENT: Record<Language, ContentData> = {
           details: {
             context: "2018年左右，自助售货机运营商友宝（Ubox）积极响应新技术趋势，在其智能售货机上引入了刷脸支付（人脸识别支付）功能，并结合具体的营销活动进行推广，这是当时零售科技领域的前沿探索。",
             strategy: "1. 技术创新：友宝是国内首批大规模应用人脸识别支付技术的自助零售终端之一。这一举措紧跟支付宝和微信支付等巨头推广“蜻蜓”、“青蛙”等刷脸支付设备的浪潮。\n2. 体验营销：初期推广活动通常以“首次使用刷脸支付立减”、“免费领取饮料”或“刷脸支付专属折扣”为卖点，吸引用户体验新技术。\n3. 数据沉淀：通过刷脸绑定用户身份和支付账户，有助于友宝获取更精准的用户消费数据，为后续的精准营销打下基础。",
-            result: "提升效率：缩短了交易时间，提升了售货机的周转效率。品牌形象升级：应用前沿科技有助于树立友宝科技感、现代化的品牌形象。"
+            result: "提升效率：缩短了交易时间，提升了售货机的周转效率. 品牌形象升级：应用前沿科技有助于树立友宝科技感、现代化的品牌形象。"
           }
         },
         { 
@@ -231,7 +231,7 @@ export const CONTENT: Record<Language, ContentData> = {
           description: "VOL.03 | “网捷贷”H5营销活动主视觉、线下发布会物料、ETC信用卡及节日热点海报设计。",
            details: { 
              context: "农业银行深圳分行需要推广其金融产品（如网捷贷、信用卡），并希望通过年轻化的视觉语言吸引用户。", 
-             strategy: "1. 扁平化插画：采用清新的扁平化风格设计“网捷贷”H5和海报，降低金融产品的距离感。\n2. 情感营销：结合春节、教师节等热点设计海报，建立情感连接。\n3. 线下发布：设计“登峰造极”发布会主视觉，营造高端大气的活动氛围。", 
+             strategy: "1. 扁平化插画：采用清新的扁平化风格设计“网捷贷”H5 and 海报，降低金融产品的距离感。\n2. 情感营销：结合春节、教师节等热点设计海报，建立情感连接。\n3. 线下发布：设计“登峰造极”发布会主视觉，营造高端大气的活动氛围。", 
              result: "在低预算下实现了高曝光，H5活动点击量突破70W+，有效促进了网捷贷等金融产品的线上申请与转化。" 
            }
         },
@@ -283,7 +283,7 @@ export const CONTENT: Record<Language, ContentData> = {
       wechatLabel: "Scan WeChat",
       educationTitle: "Education",
       education: [
-        { school: "INTI International University", degree: "MBA", year: "2025" },
+        { school: "INTI International University", degree: "MBA" },
         { school: "Beijing Foreign Studies University", degree: "BA in Business Admin" }
       ],
       certificationTitle: "Core Skills",
@@ -315,7 +315,7 @@ export const CONTENT: Record<Language, ContentData> = {
       ]
     },
     experience: {
-      title: "Professional Impact",
+      title: "Core Project Experience",
       items: [
         {
           company: "Global Vision & Career Development Project",
